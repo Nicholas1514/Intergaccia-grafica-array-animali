@@ -46,6 +46,10 @@ namespace Interfaccia_grafica
         {
 
         }
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Cancellazione(vet, ref indice, textBox4.Text);
+        }
 
         //funzioni servizio
         public void Aggiunta(string[] vet, ref int indice, string animale)
@@ -66,10 +70,25 @@ namespace Interfaccia_grafica
             }
             
         }
+        public void Cancellazione(string[] vet, ref int indice, string cerca)
+        {
+            for (int i = 0; i < indice; i++)
+            {
+                if (vet[i] == cerca)
+                {
+                    
+                    listView1.Items.RemoveAt(i);
+                  
+                }
+            }
+
+        }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
 
         }
+
+     
     }
 }

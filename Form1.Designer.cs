@@ -38,6 +38,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,7 +80,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(614, 112);
+            this.button2.Location = new System.Drawing.Point(614, 140);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(174, 23);
             this.button2.TabIndex = 3;
@@ -119,12 +121,31 @@
             this.label2.TabIndex = 7;
             this.label2.Text = "Inserisci l\'animale da sostituire a quello indicato ";
             // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(371, 227);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(223, 20);
+            this.textBox4.TabIndex = 8;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(614, 223);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(174, 23);
+            this.button3.TabIndex = 9;
+            this.button3.Text = "Cancella";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label1);
@@ -152,6 +173,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox textBox4;
     }
 }
 
