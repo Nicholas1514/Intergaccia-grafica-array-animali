@@ -34,13 +34,13 @@ namespace Interfaccia_grafica
             Aggiunta(vet, ref indice, textBox1.Text);
             listView1.Items.Add(textBox1.Text);
         }
-        private void button2_Click(object sender, EventArgs e)
+
+        private void button2_Click_1(object sender, EventArgs e)
         {
 
-           
-            
+            Modifica(vet, ref indice,textBox2.Text,textBox3.Text);
+     
         }
-
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -53,8 +53,21 @@ namespace Interfaccia_grafica
             vet[indice] = animale;
             indice++;
         }
+        public void Modifica(string[] vet,ref int indice,string cerca,string modifica)
+        {
+           for(int i = 0; i < indice; i++)
+            {
+                if(vet[i] == cerca)
+                {
+                    vet[i] = modifica;
+                    listView1.Items.RemoveAt(i);
+                    listView1.Items.Insert(i, textBox3.Text);
+                }
+            }
+            
+        }
 
-        private void button2_Click_1(object sender, EventArgs e)
+        private void textBox3_TextChanged(object sender, EventArgs e)
         {
 
         }
